@@ -13,3 +13,6 @@ $config['distributed_poller_memcached_timeout'] = 1000;
 // Redis settings
 $config['redis_host'] = 'redis';
 $config['redis_port'] = 6379;
+
+// SNMP settings
+$config['snmp']['community'] = array("public");
