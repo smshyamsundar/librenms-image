@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  # LibreNMS Web, Poller, and Database in One Container
+  librenms:
+    image: librenms/librenms:latest
+    container_name: librenms_all_in_one
+    environment:
+      - DB_HOST=db
+      - DB_NAME=librenms
+      - DB_USER=librenms
+      - DB_PASSWORD=xxx # As per documentation
+      - REDIS_HOST=redis
+      - TZ=America/Los_Angeles
+    volumes:
+      - librenms_data:/opt/librenms
+    ports:
+      - "8000:8000"  # Expose the web interface
+    networks:
+      - librenms_net
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+  # MariaDB for the LibreNMS Database
+  db:
+    image: mariadb:10
+    container_name: librenms_db
+    environment:
+      - MYSQL_ROOT_PASSWORD=xxx # Default root password (can be modified)
+      - MYSQL_DATABASE=librenms
+      - MYSQL_USER=librenms
+      - MYSQL_PASSWORD=xxx # This should match with DB_PASSWORD
+      - TZ=America/Los_Angeles
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - librenms_net
+
+  # Redis for caching
+  redis:
+    image: redis:7.2-alpine
+    container_name: librenms_redis
+    networks:
+      - librenms_net
+
+volumes:
+  librenms_data:
+  db_data:
+
+networks:
+  librenms_net:
+    driver: bridge
