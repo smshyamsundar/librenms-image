@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  librenms:
+    image: librenms/librenms:latest
+    container_name: librenms_all_in_one
+    environment:
+      - DB_HOST=localhost
+      - DB_NAME=librenms
+      - DB_USER=librenms
+      - DB_PASSWORD=xxx
+      - REDIS_HOST=localhost
+      - TZ=America/Los_Angeles
+    ports:
+      - "8081:8000"  # Exposing port 8000 inside the container as 8081 outside
+    volumes:
+      - librenms_data:/opt/librenms
+      - /opt/librenms/config.php:/opt/librenms/config.php  # Optional, to mount your custom config.php
+    restart: always
+    command: "/init"  # Use the default entrypoint for the LibreNMS container
+    networks:
+      - librenms_network
+
+volumes:
+  librenms_data:
+
+networks:
+  librenms_network:
+    driver: bridge
