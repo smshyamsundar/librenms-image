@@ -21,9 +21,9 @@ $config['snmp']['community'] = array("public");
 $config['enable_syslog'] = 1;
 
 // Alert settings (example - adjust if needed)
-$config['alert']['transports'] = [
-    'mail' => [
-        'enable' => true,
-        'default_only' => false,
-    ],
-];
+// $config['alert']['transports'] = [
+//   'mail' => [
+//       'enable' => true,
+//       'default_only' => false,
+//  ],
+//]; 
