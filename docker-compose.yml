@@ -1,7 +1,6 @@
 version: '3.8'
-
 services:
-  # LibreNMS Web, Poller, and Database in One Container
+  # LibreNMS Web, Poller, and Database in one Container
   librenms:
     image: librenms/librenms:latest
     container_name: librenms_all_in_one
