@@ -21,7 +21,6 @@ services:
       - librenms_network
 volumes:
   librenms_data:
-
 networks:
   librenms_network:
     driver: bridge
