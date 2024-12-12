@@ -19,7 +19,6 @@ services:
     command: "/init"  # Use the default entrypoint for the LibreNMS container
     networks:
       - librenms_network
-
 volumes:
   librenms_data:
 
