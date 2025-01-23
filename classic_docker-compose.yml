@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   librenms:
     image: librenms/librenms:latest
