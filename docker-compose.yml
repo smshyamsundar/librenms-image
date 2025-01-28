@@ -1,5 +1,4 @@
 version: '3.8'
-
 services:
   # LibreNMS Web, Poller, and Database in one Container
   librenms:
