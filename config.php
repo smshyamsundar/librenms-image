@@ -1,4 +1,5 @@
 <?php
+
 // Poller settings
 $config['distributed_poller'] = true;
 $config['distributed_poller_name'] = 'Poller-1';
