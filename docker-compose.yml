@@ -3,6 +3,7 @@ version: '3.8'
 services:
 
   # LibreNMS Web, Poller, and Database in a single Container
+  
   librenms:
     image: librenms/librenms:latest
     container_name: librenms_all_in_one
@@ -25,6 +26,7 @@ services:
         condition: on-failure
 
   # MariaDB for the LibreNMS Database
+  
   db:
     image: mariadb:10
     container_name: librenms_db
@@ -40,6 +42,7 @@ services:
       - librenms_net
 
   # Redis for caching
+  
   redis:
     image: redis:7.2-alpine
     container_name: librenms_redis
