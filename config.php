@@ -1,6 +1,6 @@
 <?php
 
-// Poller settings
+// Poller settings:
 $config['distributed_poller'] = true;
 $config['distributed_poller_name'] = 'Poller-1';
 $config['distributed_poller_group'] = 1; // if you have multiple poller groups
@@ -10,14 +10,14 @@ $config['distributed_poller_memcached_host'] = 'redis';
 $config['distributed_poller_memcached_port'] = 6379;
 $config['distributed_poller_memcached_timeout'] = 1000;
 
-// Redis settings
+// Redis settings:
 $config['redis_host'] = 'redis';
 $config['redis_port'] = 6379;
 
 // SNMP settings
 $config['snmp']['community'] = array("public");
 
-// Syslog integration
+// Syslog integration:
 $config['enable_syslog'] = 1;
 
 // Alert settings (example - adjust if needed)
