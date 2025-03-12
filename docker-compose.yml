@@ -25,7 +25,6 @@ services:
         condition: on-failure
 
   # MariaDB for the LibreNMS Database
-  
   db:
     image: mariadb:10
     container_name: librenms_db
