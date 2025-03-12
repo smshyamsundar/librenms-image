@@ -40,7 +40,6 @@ services:
       - librenms_net
 
   # Redis for caching
-  
   redis:
     image: redis:7.2-alpine
     container_name: librenms_redis
