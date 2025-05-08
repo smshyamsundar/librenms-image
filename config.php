@@ -1,6 +1,6 @@
 <?php
 
-// Poller setting
+// Poller settings
 $config['distributed_poller'] = true;
 $config['distributed_poller_name'] = 'Poller-1';
 $config['distributed_poller_group'] = 1; // if you have multiple poller groups (adjust if needed)
