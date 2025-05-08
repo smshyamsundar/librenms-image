@@ -14,7 +14,7 @@ $config['distributed_poller_memcached_timeout'] = 1000;
 $config['redis_host'] = 'redis';
 $config['redis_port'] = 6379;
 
-// SNMP settings
+// SNMP setting
 $config['snmp']['community'] = array("public");
 
 // Syslog integration
