@@ -17,7 +17,7 @@ $config['redis_port'] = 6379;
 // SNMP setting
 $config['snmp']['community'] = array("public");
 
-// Syslog integrations
+// Syslog integration
 $config['enable_syslog'] = 1;
 
 // Alert settings (example - adjust if needed)
