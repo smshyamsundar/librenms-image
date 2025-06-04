@@ -3,7 +3,7 @@
 // Poller settings
 $config['distributed_poller'] = true;
 $config['distributed_poller_name'] = 'Poller-1';
-$config['distributed_poller_group'] = 1; // if you have multiple poller groups (adjust if needed)
+$config['distributed_poller_group'] = 1; // if you have multiple poller groups (adjust if needed
 $config['poller_id'] = 1;
 $config['poller_threads'] = 16;
 $config['distributed_poller_memcached_host'] = 'redis';
