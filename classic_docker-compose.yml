@@ -16,7 +16,7 @@ services:
       - librenms_data:/opt/librenms
       - /opt/librenms/config.php:/opt/librenms/config.php   #  Optional to mount your custom config.php
     restart: always
-    command: "/init"   #  Use the default entrypoint for the LibreNMS container
+    command: "/init"  #  Use the default entrypoint for the LibreNMS container
     networks:
       - librenms_network
 volumes:
