@@ -11,7 +11,7 @@ services:
       - REDIS_HOST=localhost
       - TZ=America/Los_Angeles
     ports:
-      - "8081:8000"   #  Exposing port 8000 inside the container as 8081 outside
+      - "8081:8000"  #  Exposing port 8000 inside the container as 8081 outside
     volumes:
       - librenms_data:/opt/librenms
       - /opt/librenms/config.php:/opt/librenms/config.php   #  Optional to mount your custom config.php
