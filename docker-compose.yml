@@ -16,7 +16,7 @@ services:
     volumes:
       - librenms_data:/opt/librenms
     ports:
-      - "8000:8000"  # Expose web interface
+      - "8000:8000" # Expose web interface
     networks:
       - librenms_net
     deploy:
