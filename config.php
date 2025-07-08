@@ -10,7 +10,7 @@ $config['distributed_poller_memcached_host'] = 'redis';
 $config['distributed_poller_memcached_port'] = 6379;
 $config['distributed_poller_memcached_timeout'] = 1000;
 
-// Redis settings
+// Redis setting
 $config['redis_host'] = 'redis';
 $config['redis_port'] = 6379;
 
