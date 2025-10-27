@@ -29,7 +29,7 @@ services:
     image: mariadb:10
     container_name: librenms_db
     environment:
-      - MYSQL_ROOT_PASSWORD=xxx # Default root password - can be modified as
+      - MYSQL_ROOT_PASSWORD=xxx # Default root password - can be modified as per 
       - MYSQL_DATABASE=librenms
       - MYSQL_USER=librenms
       - MYSQL_PASSWORD=xxx # This should match with DB_PASSWORD
